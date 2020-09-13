@@ -38,3 +38,13 @@ function Test(){
 }
 
 //dice game
+
+function RollPlayerOne(){
+    var result = Math.floor(Math.random()*6)+1
+    document.getElementById("playerOneDice").innerText = result
+}
+
+function RollPlayerTwo(){
+    var result = Math.floor(Math.random()*6)+1
+    document.getElementById("playerTwoDice").innerText = result
+}
