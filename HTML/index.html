@@ -40,12 +40,44 @@
                 <li>For each correct guess, the letter will appear</li>
                 <li>If the team lose all their marks before they guess the word they lose</li>
             </ul>
-            <input type="text" id="UserWord">
-            <button type="button" id="UserWordButton">Submit</button>
+            <input type="text" id="mysteryWord">
+            <!-- <button type="button" id="UserWordButton">Submit</button>
             <input type="text" id="UserGuess" maxlength="1">
-            <button type="button" id="UserGuessButton">Guess</button>
+            <button type="button" id="UserGuessButton">Guess</button> -->
+            <button type="button" id="AddBox" onclick="Test()">Test</button>
+            <div id="TestDiv">
+
+            </div>
     </div>
     <div class="container">
+        <h2>Dice Game</h2>
+        <p>Instructions:</p>
+            <ul>
+                <li>Select how many players there are</li>
+                <li>On your turn, select roll the dice</li>
+                <li>If your dice roll lands on 1, 2, 3, 4 or 5 then this will be added to your score</li>
+                <li>If your dice roll lands on 6 then your score resets</li>
+                <li>If there are two players then player two will have their go</li>
+                <li>The first person to reach 21 wins</li>
+            </ul>
+        <div class="playerOne">
+            <div id="playerOneDice" class="dice">
+                <h2>hello 1</h2>
+            </div>
+            <div class="score" id="playerOneScore">
+
+            </div>
+        </div>
+        <div class="playerTwo">
+            <div id="playerTwoDice" class="dice">
+                <h2>hello 2</h2>
+            </div>
+            <div class="score" id="playerTwoScore">
+                
+            </div>
+        </div>
+
+        </div>
     </div>
     
     <script src="../JS/functions.js"></script>

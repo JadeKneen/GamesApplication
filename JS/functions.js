@@ -1,3 +1,5 @@
+//create a story game
+
 function OnSubmit() {
     document.getElementById("answerTextbox").innerHTML 
     += document.getElementById("userInput").value + " "
@@ -16,3 +18,23 @@ function Hide(){
 function Reset(){
     document.getElementById("answerTextbox").innerHTML = "";
 }
+
+//hangman game
+
+var MysteryWord = document.getElementById("mysteryWord").value
+var Letters = []
+
+for (i = MysteryWord[0]; i < MysteryWord.length; i++) {
+    console.log(i)
+  }
+
+
+
+
+function Test(){
+    // var MysteryWord = document.getElementById("mysteryWord").value
+    [...MysteryWord].forEach(c => console.log(c))
+    // document.getElementById("TestDiv").appendChild(document.createElement("input"))
+}
+
+//dice game
