@@ -42,9 +42,21 @@ function Test(){
 function RollPlayerOne(){
     var result = Math.floor(Math.random()*6)+1
     document.getElementById("playerOneDice").innerText = result
+    if(result == 6){
+        console.log("Oops you rolled a six")
+    }
+    else{
+        console.log(result)
+    }
 }
 
 function RollPlayerTwo(){
     var result = Math.floor(Math.random()*6)+1
     document.getElementById("playerTwoDice").innerText = result
+    if(result == 6){
+        console.log("Oops you rolled a six")
+    }
+    else{
+        console.log(result)
+    }
 }
