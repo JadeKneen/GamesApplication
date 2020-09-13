@@ -1,0 +1,19 @@
+.container
+{
+height: 300px;
+width: 100%;
+border: 2px;
+border-style: dashed;
+margin:10px;
+padding: 10px;
+}
+
+.navbar
+{
+height: 100%;
+width: 100px;
+border-style: dashed;
+border: 2px, dashed, black;
+background-color: aquamarine;
+position: fixed;
+}

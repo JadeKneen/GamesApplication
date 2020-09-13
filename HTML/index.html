@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy App</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+<!-- Create a story by submitting and then revealing -->
+    <div class="container">
+        <label>
+            <h2>Create your own story</h2>
+        </label>
+            <p>Instructions:</p>
+            <ul>
+                <li>You start with an empty story</li>
+                <li>Each player takes a turn to write in a sentence</li>
+                <li>When everyone has finished, press Reveal and read the story</li>
+            </ul>
+        <input type="text" id="userInput">
+        <button type="button" onclick="OnSubmit()">Submit</button>
+
+        <div id="RevealStoryDiv">
+            <h3 id="answerTextbox" hidden></h3>
+            <button type="button" id="Reveal" onclick="Reveal()">Reveal</button>
+            <button type="button" id="Hide" onclick="Hide()">Hide</button>
+        </div>
+        <button type="button" id="Reset" onclick="Reset()">Reset</button>
+    </div>
+    <div class="container">
+        <label>
+            <h2>Play Hangman</h2>
+        </label>
+            <p>Instructions:</p>
+            <ul>
+                <li>Player one enters a word and presses submit</li>
+                <li>Each player takes a turn to guess a letter</li>
+                <li>For each wrong guess, a mark will disappear</li>
+                <li>For each correct guess, the letter will appear</li>
+                <li>If the team lose all their marks before they guess the word they lose</li>
+            </ul>
+            <input type="text" id="UserWord">
+            <button type="button" id="UserWordButton">Submit</button>
+            <input type="text" id="UserGuess" maxlength="1">
+            <button type="button" id="UserGuessButton">Guess</button>
+    </div>
+    <div class="container">
+    </div>
+    
+    <script src="../JS/functions.js"></script>
+</body>
+</html>
