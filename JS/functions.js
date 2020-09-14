@@ -45,16 +45,16 @@ function RollPlayerOne(){
     
     document.getElementById("playerOneDice").innerText = dice
     
+    
     if(dice != 6){  
          
-        console.log(score += dice)
+        score += dice
     }
     else{
         score = 0;
-        console.log(`Oops you rolled a six. Your score is now ${score}`)
     }
     
-    
+    document.getElementById("scoreTextbox").innerText = score
     
 
 }
