@@ -68,7 +68,7 @@
             <button type="button" id="rollButton" onclick="RollPlayerOne()">Roll 1</button>
                 <h4 id="scoreTextbox">0</h4>
         </div>
-        <div class="playerTwo">
+        <div class="playerTwo" hidden>
             <div id="playerTwoDice" class="dice">
                 <h2 id="PlayerTwoResult">hello 2</h2>
             </div>
@@ -77,6 +77,8 @@
             </div>
             <button type="button" id="rollButton" onclick="RollPlayerTwo()">Roll 2</button>
         </div>
+        <h4 style="color: red;" id="rolledSixText" hidden>Oh no you rolled a 6, your score has been reset.</h4>
+        <h2 style="color: green;" id="winningText" hidden>Congratulations you have won!</h2>
             
         </div>
     </div>

@@ -44,19 +44,24 @@ function RollPlayerOne(){
     let dice = Math.floor(Math.random()*6)+1
     
     document.getElementById("playerOneDice").innerText = dice
-    
-    
+    if(score < 21){
+        document.getElementById("winningText").hidden = true; 
     if(dice != 6){  
          
         score += dice
+        document.getElementById("rolledSixText").hidden = true;
     }
     else{
         score = 0;
+        document.getElementById("rolledSixText").hidden = false;
+    }
+}
+    else{
+      document.getElementById("winningText").hidden = false;  
+      document.getElementById("scoreTextbox").hidden = true;
     }
     
     document.getElementById("scoreTextbox").innerText = score
-    
-
 }
 
 function RollPlayerTwo(){
