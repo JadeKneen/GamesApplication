@@ -39,15 +39,24 @@ function Test(){
 
 //dice game
 
+let score = 0; 
 function RollPlayerOne(){
-    var result = Math.floor(Math.random()*6)+1
-    document.getElementById("playerOneDice").innerText = result
-    if(result == 6){
-        console.log("Oops you rolled a six")
+    let dice = Math.floor(Math.random()*6)+1
+    
+    document.getElementById("playerOneDice").innerText = dice
+    
+    if(dice != 6){  
+         
+        console.log(score += dice)
     }
     else{
-        console.log(result)
+        score = 0;
+        console.log(`Oops you rolled a six. Your score is now ${score}`)
     }
+    
+    
+    
+
 }
 
 function RollPlayerTwo(){
