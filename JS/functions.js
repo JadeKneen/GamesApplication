@@ -39,20 +39,22 @@ function Test(){
 
 //dice game
 
-let score = 0; 
+let playerOneScore = 0; 
+let playerTwoScore = 0; 
+
 function RollPlayerOne(){
     let dice = Math.floor(Math.random()*6)+1
     
     document.getElementById("playerOneDice").innerText = dice
-    if(score < 21){
+    if(playerOneScore < 21){
         document.getElementById("winningText").hidden = true; 
     if(dice != 6){  
          
-        score += dice
+        playerOneScore += dice
         document.getElementById("rolledSixText").hidden = true;
     }
     else{
-        score = 0;
+        playerOneScore = 0;
         document.getElementById("rolledSixText").hidden = false;
     }
 }
@@ -61,16 +63,30 @@ function RollPlayerOne(){
       document.getElementById("scoreTextbox").hidden = true;
     }
     
-    document.getElementById("scoreTextbox").innerText = score
+    document.getElementById("scoreTextbox").innerText = playerOneScore
 }
 
 function RollPlayerTwo(){
-    var result = Math.floor(Math.random()*6)+1
-    document.getElementById("playerTwoDice").innerText = result
-    if(result == 6){
-        console.log("Oops you rolled a six")
+    let dice = Math.floor(Math.random()*6)+1
+    
+    document.getElementById("playerTwoDice").innerText = dice
+    if(playerTwoScore < 21){
+        document.getElementById("winningText").hidden = true; 
+    if(dice != 6){  
+         
+        playerTwoScore += dice
+        document.getElementById("rolledSixText").hidden = true;
     }
     else{
-        console.log(result)
+        playerTwoScore = 0;
+        document.getElementById("rolledSixText").hidden = false;
     }
 }
+    else{
+      document.getElementById("winningText").hidden = false;  
+      document.getElementById("playerTwoScoreTextbox").hidden = true;
+    }
+    
+    document.getElementById("playerTwoScoreTextbox").innerText = playerTwoScore
+}
+
