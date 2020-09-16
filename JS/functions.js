@@ -26,6 +26,7 @@ var Letters = []
 function InsertWord(){
     Letters.push(MysteryWord.value.split(""))
     console.table(Letters)
+    document.getElementById("userWordDiv").hidden = true
 }
 
 function GuessLetter(){

@@ -41,8 +41,14 @@
                 <li>For each correct guess, the letter will appear</li>
                 <li>If the team lose all their marks before they guess the word they lose</li>
             </ul>
-            <input type="text" id="mysteryWord">
-            <button type="button" id="UserWord" onclick="InsertWord()">Test</button>
+            <div id="userWordDiv">
+                <input type="text" id="mysteryWord">
+                <button type="button" id="UserWord" onclick="InsertWord()">Test</button>
+            </div>
+            <div id="playerLetterGuess">
+                <input type="text" maxlength="1" id="LetterGuess">
+                <button type="button" id="GuessButton">Guess</button>
+            </div>
             <button type="button" id="AddBox" onclick="Test()">Test</button>
             <div id="TestDiv">
 
