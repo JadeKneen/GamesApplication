@@ -28,6 +28,7 @@
         </div>
         <button type="button" id="Reset" onclick="Reset()">Reset</button>
     </div>
+    <!-- Hangman game -->
     <div class="container">
         <label>
             <h2>Play Hangman</h2>
@@ -41,14 +42,13 @@
                 <li>If the team lose all their marks before they guess the word they lose</li>
             </ul>
             <input type="text" id="mysteryWord">
-            <!-- <button type="button" id="UserWordButton">Submit</button>
-            <input type="text" id="UserGuess" maxlength="1">
-            <button type="button" id="UserGuessButton">Guess</button> -->
+            <button type="button" id="UserWord" onclick="InsertWord()">Test</button>
             <button type="button" id="AddBox" onclick="Test()">Test</button>
             <div id="TestDiv">
 
             </div>
     </div>
+    <!-- Dice Game -->
     <div class="container">
         <h2>Dice Game</h2>
         <p>Instructions:</p>
@@ -65,17 +65,17 @@
                 
             </div>
             
-            <button type="button" id="rollButton" onclick="RollPlayerOne()">Roll 1</button>
+            <button type="button" id="playerOneRollButton" onclick="RollPlayerOne()">Roll 1</button>
                 <h4 id="scoreTextbox">0</h4>
         </div>
         <div class="playerTwo">
             <div id="playerTwoDice" class="dice">
-                <h2 id="PlayerTwoResult">hello 2</h2>
+                <h2 id="PlayerTwoResult"></h2>
             </div>
             <div class="score" id="playerTwoScore">
                 <h4 id="playerTwoScoreTextbox">0</h4>
             </div>
-            <button type="button" id="rollButton" onclick="RollPlayerTwo()">Roll 2</button>
+            <button type="button" id="playerTwoRollButton" onclick="RollPlayerTwo()">Roll 2</button>
         </div>
         <h4 style="color: red;" id="rolledSixText" hidden>Oh no you rolled a 6, your score has been reset.</h4>
         <h2 style="color: green;" id="winningText" hidden>Congratulations you have won!</h2>

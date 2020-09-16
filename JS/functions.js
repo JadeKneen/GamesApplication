@@ -20,13 +20,18 @@ function Reset(){
 }
 
 //hangman game
-
-var MysteryWord = document.getElementById("mysteryWord").value
+var MysteryWord = document.getElementById("mysteryWord")
 var Letters = []
 
-for (i = MysteryWord[0]; i < MysteryWord.length; i++) {
-    console.log(i)
-  }
+function InsertWord(){
+    Letters.push(MysteryWord.value.split(""))
+    console.table(Letters)
+}
+
+function GuessLetter(){
+    
+}
+
 
 
 
@@ -56,6 +61,8 @@ function RollPlayerOne(){
     else{
         playerOneScore = 0;
         document.getElementById("rolledSixText").hidden = false;
+        document.getElementById("playerOneRollButton").disabled = true;
+        document.getElementById("playerOneRollButton").disabled = false;
     }
 }
     else{
