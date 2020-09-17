@@ -30,8 +30,17 @@ function InsertWord(){
 }
 
 function GuessLetter(){
-    
-}
+    var Guess = document.getElementById("LetterGuess")
+    console.log(Guess.value)
+    if(Letters.toString().includes(Guess.value)){
+        console.log("Yes this is in the word. Searching through word")
+    }
+    else{
+        console.log("Still no luck!")
+    }
+      Guess.value = ""  
+    }
+
 
 
 
