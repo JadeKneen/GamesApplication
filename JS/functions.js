@@ -21,22 +21,26 @@ function Reset(){
 
 //hangman game
 var MysteryWord = document.getElementById("mysteryWord")
+// var PushWordToArray = MysteryWord.value.split("")
 var Letters = []
 var guessLetters = []
 var Alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y","z"]
 
 function InsertWord(){
-    Letters.push(MysteryWord.value.split(""))
+    for(i = 0; i < MysteryWord.value.length; i++){
+        Letters.push(MysteryWord.value[i])
+    }
     console.table(Letters)
     document.getElementById("userWordDiv").hidden = true
+    document.getElementById("playerLetterGuess").hidden = false;
 }
 
 function GuessLetter(){
     var Guess = document.getElementById("LetterGuess")
-    console.log(Guess.value.split(""))
-    if(Letters.toString().includes(Guess.value)){
+    // console.log(Guess.value.split(""))
+    if(Letters.includes(Guess.value)){
         guessLetters.push(Guess.value)    
-        console.log("Yes this is in the word. Searching through word")
+        console.log("Yes this is in the word.")
     }
     else{
         console.log("Still no luck!")
