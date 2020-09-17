@@ -22,6 +22,7 @@ function Reset(){
 //hangman game
 var MysteryWord = document.getElementById("mysteryWord")
 var Letters = []
+var guessLetters = []
 
 function InsertWord(){
     Letters.push(MysteryWord.value.split(""))
@@ -31,14 +32,19 @@ function InsertWord(){
 
 function GuessLetter(){
     var Guess = document.getElementById("LetterGuess")
-    console.log(Guess.value)
+    console.log(Guess.value.split(""))
     if(Letters.toString().includes(Guess.value)){
+        guessLetters.push(Guess.value)    
         console.log("Yes this is in the word. Searching through word")
     }
     else{
         console.log("Still no luck!")
     }
       Guess.value = ""  
+    }
+
+    function SeeGuess(){
+        console.table(guessLetters)
     }
 
 
