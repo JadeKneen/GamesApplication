@@ -21,10 +21,9 @@ function Reset(){
 
 //hangman game
 var MysteryWord = document.getElementById("mysteryWord")
-// var PushWordToArray = MysteryWord.value.split("")
 var Letters = []
 var guessLetters = []
-var Alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y","z"]
+
 
 function InsertWord(){
     for(i = 0; i < MysteryWord.value.length; i++){
@@ -37,16 +36,23 @@ function InsertWord(){
 
 function GuessLetter(){
     var Guess = document.getElementById("LetterGuess")
-    // console.log(Guess.value.split(""))
     if(Letters.includes(Guess.value)){
         guessLetters.push(Guess.value)    
-        console.log("Yes this is in the word.")
+        console.log("Yes this is in the word. It is letter " + (Letters.indexOf(Guess.value)+1))
+        CheckGuessAgainstWord()
     }
     else{
         console.log("Still no luck!")
     }
       Guess.value = ""  
     }
+
+    function CheckGuessAgainstWord(){
+        if(Letters.length == guessLetters.length){
+            console.log("Success, you won!! The word was " + MysteryWord.value)
+        }
+    }
+
 
     function SeeGuess(){
         console.table(guessLetters)
