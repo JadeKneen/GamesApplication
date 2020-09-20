@@ -22,6 +22,7 @@ function Reset(){
 //hangman game
 var MysteryWord = document.getElementById("mysteryWord")
 var Letters = []
+var BadLetters = []
 var guessLetters = []
 
 
@@ -40,23 +41,35 @@ function GuessLetter(){
         guessLetters.push(Guess.value)    
         console.log("Yes this is in the word. It is letter " + (Letters.indexOf(Guess.value)+1))
         CheckGuessAgainstWord()
+        document.getElementById("correctGuesses").innerHTML += Guess.value
     }
     else{
         console.log("Still no luck!")
+        BadLetters.push(Guess.value)
+        document.getElementById("incorrectGuesses").innerHTML += Guess.value
+        CheckHangmanStatus()
     }
       Guess.value = ""  
     }
 
     function CheckGuessAgainstWord(){
+        
         if(Letters.length == guessLetters.length){
             console.log("Success, you won!! The word was " + MysteryWord.value)
         }
     }
 
+    function CheckHangmanStatus(){
+        if(BadLetters.length >= 8){
+            console.log("You have ran out of chances")
+        }
+    }
 
     function SeeGuess(){
-        console.table(guessLetters)
+        console.table(Letters)
+        console.table(BadLetters)
     }
+
 
 
 

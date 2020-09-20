@@ -42,12 +42,21 @@
                 <li>If the team lose all their marks before they guess the word they lose</li>
             </ul>
             <div id="userWordDiv">
+                <h3>Type in your word</h3>
                 <input type="text" id="mysteryWord">
                 <button type="button" id="UserWord" onclick="InsertWord()">Test</button>
             </div>
             <div id="playerLetterGuess" hidden>
+                <h3>Start guessing!</h3>
                 <input type="text" maxlength="1" id="LetterGuess">
                 <button type="button" id="GuessButton" onclick="GuessLetter()">Guess</button>
+                <br>
+                <div>
+                    <label id="correctGuesses" style="color: green;"></label>
+                </div>
+                <div>
+                    <label id="incorrectGuesses" style="color: red;"></label>
+                </div>
             </div>
             <button type="button" id="AddBox" onclick="SeeGuess()">Test</button>
             <div id="TestDiv">
