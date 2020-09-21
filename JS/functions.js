@@ -33,6 +33,15 @@ function InsertWord(){
     console.table(Letters)
     document.getElementById("userWordDiv").hidden = true
     document.getElementById("playerLetterGuess").hidden = false;
+    CreateBox()
+}
+
+function CreateBox(){
+    var newBox = document.createElement("div")
+    var newContent = document.createTextNode(MysteryWord.value)
+    newBox.appendChild(newContent)
+    var currentDiv = document.getElementById("TestDiv")
+    currentDiv.appendChild(newBox)
 }
 
 function GuessLetter(){
@@ -49,11 +58,10 @@ function GuessLetter(){
         document.getElementById("incorrectGuesses").innerHTML += Guess.value
         CheckHangmanStatus()
     }
-      Guess.value = ""  
+      Guess.value = "" 
     }
 
     function CheckGuessAgainstWord(){
-        
         if(Letters.length == guessLetters.length){
             console.log("Success, you won!! The word was " + MysteryWord.value)
         }
@@ -61,7 +69,8 @@ function GuessLetter(){
 
     function CheckHangmanStatus(){
         if(BadLetters.length >= 8){
-            console.log("You have ran out of chances")
+            console.log("You have ran out of chances. The word was " + MysteryWord.value)
+            document.getElementById("GuessButton").disabled = true;
         }
     }
 
