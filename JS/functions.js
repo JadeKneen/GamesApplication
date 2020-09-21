@@ -36,12 +36,16 @@ function InsertWord(){
     CreateBox()
 }
 
+//need to create individual boxes per letter
 function CreateBox(){
-    var newBox = document.createElement("div")
-    var newContent = document.createTextNode(MysteryWord.value)
-    newBox.appendChild(newContent)
-    var currentDiv = document.getElementById("TestDiv")
-    currentDiv.appendChild(newBox)
+    
+    for(i = 0; i < Letters.length; i++){
+       var newBox = document.createElement("p")
+       var newContent = document.createTextNode(Letters[i])
+        newBox.appendChild(newContent)     
+        var currentDiv = document.getElementById("TestDiv")
+        currentDiv.appendChild(newBox)
+    }
 }
 
 function GuessLetter(){
