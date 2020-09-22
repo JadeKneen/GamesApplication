@@ -38,7 +38,6 @@ function InsertWord(){
 
 //need to create individual boxes per letter
 function CreateBox(){
-    
     for(i = 0; i < Letters.length; i++){
        var newBox = document.createElement("p")
        var newContent = document.createTextNode(Letters[i])
@@ -67,13 +66,13 @@ function GuessLetter(){
 
     function CheckGuessAgainstWord(){
         if(Letters.length == guessLetters.length){
-            console.log("Success, you won!! The word was " + MysteryWord.value)
+            document.getElementById("winningText").hidden = false;
         }
     }
 
     function CheckHangmanStatus(){
         if(BadLetters.length >= 8){
-            console.log("You have ran out of chances. The word was " + MysteryWord.value)
+            document.getElementById("losingText").hidden = false;
             document.getElementById("GuessButton").disabled = true;
         }
     }
@@ -83,17 +82,6 @@ function GuessLetter(){
         console.table(BadLetters)
     }
 
-
-
-
-
-
-
-function Test(){
-    // var MysteryWord = document.getElementById("mysteryWord").value
-    [...MysteryWord].forEach(c => console.log(c))
-    // document.getElementById("TestDiv").appendChild(document.createElement("input"))
-}
 
 //dice game
 
