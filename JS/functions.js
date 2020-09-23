@@ -35,15 +35,19 @@ function InsertWord(){
     document.getElementById("playerLetterGuess").hidden = false;
     CreateBox()
 }
+var letterBoxes;
+var newDiv = document.getElementById("TestDiv")
 
 //need to create individual boxes per letter
 function CreateBox(){
     for(i = 0; i < Letters.length; i++){
        var newBox = document.createElement("p")
        var newContent = document.createTextNode(Letters[i])
-        newBox.appendChild(newContent)     
-        var currentDiv = document.getElementById("TestDiv")
-        currentDiv.appendChild(newBox)
+        newBox.appendChild(newContent)  
+        
+        newDiv.style.backgroundColor = "red"
+        newDiv.appendChild(newBox)
+        newDiv.hidden = true;
     }
 }
 
@@ -67,6 +71,7 @@ function GuessLetter(){
     function CheckGuessAgainstWord(){
         if(Letters.length == guessLetters.length){
             document.getElementById("winningText").hidden = false;
+            newDiv.hidden = false;
         }
     }
 
